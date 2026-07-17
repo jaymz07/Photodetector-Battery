@@ -289,5 +289,46 @@
 		\end{subfigure}
 		\caption{Amplifier section. The AC coupling switch is connected to the bottom of the amplifier board through a cable long enough to be able to slide out the amplifier board. The amplifier board output is connected via a 47{\textohm} resistor to a small length of coaxial cable, the other end of which is connected to the device output BNC connector.}
 	\end{figure}
+	
+	\subsection*{Install Output Connector}
+	The main output connector can be installed into the back plate (near the power supply section).
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{../picture/openTop}
+		\caption{Mostly assembled photodetector shown with BNC connector on back.}
+		\label{fig:opentop}
+	\end{figure}
+	
+	\subsection*{Install Photodiode Connections}
+	In order to have a serviceable unit, we should leave a solderable break point in the photodiode connections. When the photodiode is connected to the front plate, this will allow the removal of the plate and service of the unit.
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{diagrams/ASM_PD}
+		\caption{Addition of a solderable break point in the photodiode connection ensures that the unit remains serviceable when the photodiode is attached to the front plate.}
+		\label{fig:asmpd}
+	\end{figure}
+	
+	\subsection*{Attach Front Panel to Photodiode}
+	
+	\subsection*{Final Assembly and Mounting}
+	
+	\section*{Test Data}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{diagrams/TEST_Setup}
+		\caption{Testing setup. Although the red LED is outside the usual detection range of the InGaAs photodiode, a response can be forced by "blasting it in the face". The LED is driven by a constant current source with external modulation.}
+		\label{fig:testsetup}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{diagrams/TEST_SCOPE}
+		\caption{Oscilloscope view of output, showing a clean sinusoidal response. The detector is set to AC coupling, and a slight residual offset can be seen.}
+		\label{fig:testscope}
+	\end{figure}
+	
+	
 
 \end{document}
