@@ -19,6 +19,15 @@
 \usepackage{caption}
 \usepackage{subcaption}
 
+\hypersetup{
+	colorlinks=true,       % True: colored text; False: boxed links
+	linkcolor=red,         % Color of internal links (sections, pages, figures)
+	citecolor=green,       % Color of library citations
+	filecolor=cyan,        % Color of links to local files
+	urlcolor=magenta,      % Color of website URLs
+	allcolors=blue         % Optional: Sets all link types to one uniform color
+}
+
 \begin{document}
 
 	\title{Battery Powered Photodetector Assembly Instructions}
@@ -41,7 +50,7 @@
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.35\linewidth]{diagrams/TIA_Power}
-		\caption{Power Connections and decoupling capacitors. The \texttt{Cs1} and \texttt{Cs2} are surface mount capacitors. \texttt{U1C} corresponds to the $\mathrm{V_{CC}}$ and $\mathrm{V_{EE}}$ connections of the op-amp \texttt{U1}.}
+		\caption{Power Connections and decoupling capacitors for the amplifier board. The \texttt{Cs1} and \texttt{Cs2} are surface mount capacitors. \texttt{U1C} corresponds to the $\mathrm{V_{CC}}$ and $\mathrm{V_{EE}}$ connections of the op-amp \texttt{U1}.}
 		\label{fig:tiapower}
 	\end{figure}
 	
@@ -91,7 +100,7 @@
 	
 	\begin{table}[H]
 		\begin{center}
-			\caption{A generic design for a 220k{\textohm} Transimpedance, 2$\times$ gain photodetector. The switchable AC coupling frequency is set to 3.3Hz, and the upper cutoff frequency is roughly 80KHz, but the response remains measurable to at least 150kHz. Tested with a Marktech Optoelectronics  \href{https://www.mouser.com/en/ProductDetail/Marktech-Optoelectronics/MTPD1346D-100?qs=DPoM0jnrROX\%252BgtLihG6RCQ\%3D\%3D}{MTPD1346D-100} InGaAs photodiode, and a \href{https://www.mouser.com/en/ProductDetail/Texas-Instruments/TL072CDR?qs=rshUhwi3fbas9IM4CCaZdw\%3D\%3D}{TI-072} op-amp.} \label{tbl:TIA_design}
+			\caption{A working design for a 220k{\textohm} Transimpedance, 2$\times$ gain photodetector. The switchable AC coupling frequency is set to 3.3Hz, and the upper cutoff frequency is roughly 80KHz, but the response remains measurable to at least 150kHz. Tested with a Marktech Optoelectronics  \href{https://www.mouser.com/en/ProductDetail/Marktech-Optoelectronics/MTPD1346D-100?qs=DPoM0jnrROX\%252BgtLihG6RCQ\%3D\%3D}{MTPD1346D-100} InGaAs photodiode, and a \href{https://www.mouser.com/en/ProductDetail/Texas-Instruments/TL072CDR?qs=rshUhwi3fbas9IM4CCaZdw\%3D\%3D}{TI-072} op-amp.} \label{tbl:TIA_design}
 			\begin{tabular}{|c|c|c|c|c|c|c|}
 			\hline
 			\verb|R_Trans| & \verb|C1|  & \verb|Cs3| & \verb|R_GND| & \verb|R_IN| & \verb|R_F| & \verb|C2| \\
@@ -162,6 +171,70 @@
 	\subsubsection*{Testing Notes}
 	The amplifier board can be tested independently from the power supply circuit. This can be done by using an external $\pm$12V bipolar power supply.
 	
-	\section*{Power Supply Circuit}
+	\section*{Power Supply Board}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{diagrams/PS_Sch_conv}
+		\caption{DC-DC converter section with filtering capacitors and inductor. For \texttt{U1}, a \href{https://www.mouser.com/en/ProductDetail/TRACO-Power/TRN-1-0523?qs=YCa\%2FAAYMW01OmFGNVe456Q\%3D\%3D}{TRACO Power TRN 1-0523} DC/DC converter is used. On the left are the 9V battery connections. The \texttt{VCC} and \texttt{VEE} are the dual outputs of the DC/DC converter.}
+		\label{fig:psschconv}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.85\linewidth]{diagrams/PS_Sch_reg}
+		\caption{Regulator section schematic.}
+		\label{fig:psschreg}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.2\linewidth]{diagrams/PS_Sch_conn}
+		\caption{Battery input connector and battery input capacitor.}
+		\label{fig:psschconn}
+	\end{figure}
+	
+	
+	\begin{table}[H]
+		\begin{center}
+			\caption{Links to component sources for power supply board}
+			\begin{tabular}{|c|c|c|}
+				\hline
+				\verb|Cs*| & 4.7{\textmu}F Surface Mount Capacitor & \href{https://www.mouser.com/en/ProductDetail/Samsung-Electro-Mechanics/CL21A475KAQNNNF?qs=xZ\%2FP\%252Ba9zWqZ12ZgK1dMWug\%3D\%3D}{Mouser Link} \\
+				\hline
+				\verb|U1| & DC/DC Converter & \href{https://www.mouser.com/en/ProductDetail/TRACO-Power/TRN-1-0523?qs=YCa\%2FAAYMW01OmFGNVe456Q\%3D\%3D}{Mouser Link} \\
+				\hline
+				\verb|U2| & Fixed +12V Positive Voltage Regulator & \href{https://www.mouser.com/en/ProductDetail/Texas-Instruments/UA78L12ACLPR?qs=0O\%2FZFlpUpJUotYwhtoESdQ\%3D\%3D}{Mouser Link} \\
+				\hline
+				\verb|U3| & Fixed -12V Negative Voltage Regulator & \href{https://www.mouser.com/en/ProductDetail/Texas-Instruments/LM79L12ACZ-LFT4?qs=QbsRYf82W3GleqCHpRJpHQ\%3D\%3D}{Mouser Link} \\
+				\hline
+			\end{tabular}
+		\end{center}
+	\end{table}
+	
+	% Subfigures 
+	\begin{figure} [h]
+		\centering
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=0.85\linewidth]{diagrams/PS_PCB_front}
+			\caption{Front}
+		\end{subfigure}%
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=0.85\linewidth]{diagrams/PS_PCB_back}
+			\caption{Back}
+		\end{subfigure}
+		\caption{Power supply circuit PCB board.}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.4\linewidth]{diagrams/PS_Pic}
+		\caption{Completed power supply board. The input capacitor is omitted here to increase viewing ability.}
+		\label{fig:pspic}
+	\end{figure}
+	
+	\section*{Photodetector Assembly}
 
 \end{document}

@@ -16,7 +16,7 @@ The enclosure used is the EECT3011 from Thorlabs, which is offered currently at 
 
 ## Why Use an Amplified Detector?
 
-Compared to a simple resistor loaded photodiode, a transimpedance amplifier offers:
+Compared to a simple resistor-loaded photodiode, a transimpedance amplifier offers:
 
 - Greater sensitivity (depending on chosen transimpedance)
 - Improved linearity by maintaining constant photodiode bias
