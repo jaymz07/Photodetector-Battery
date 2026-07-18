@@ -46,7 +46,7 @@ Compared to a simple resistor-loaded photodiode, a transimpedance amplifier offe
 - Reduced sensitivity to cable capacitance and external loading
 - Better compatability with equipment (can be 50 ohm terminated)
 
-In order to power the transimpedance amplifier, a DC-DC converter board is included as part of the design. This board converts the 9V input from the battery into a regulated $\pm$12V bipolar power supply usable by the transimpedance amplifier board.
+In order to power the transimpedance amplifier, a DC-DC converter board is included as part of the design. This board converts the 9V input from the battery into a regulated +-12V bipolar power supply usable by the transimpedance amplifier board.
 
 ## Why This Detector?
 
