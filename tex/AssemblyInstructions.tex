@@ -244,7 +244,7 @@
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7\linewidth]{diagrams/ASM_Parts}
-		\caption{Parts required for assembly. Not shown are the extra internal wires.}
+		\caption{Parts required for assembly. Not shown are the extra internal wires. Pin headers and DuPont connectors can be used to secure the connections from the wires to the PCB. This is at least recommended for the \texttt{PWR\_IN} connections of the power supply board in order for the unit to be fully serviceable.}
 		\label{fig:asmparts}
 	\end{figure}	
 	
@@ -278,7 +278,7 @@
 	\subsection*{Install Amplifier Section and AC Coupling Switch}
 	The power supply board will be held captive by the two switches, so make sure the power supply board is functional with a voltage meter before proceeding.
 	
-		% Subfigures 
+	% Subfigures 
 	\begin{figure} [H]
 		\centering
 		\begin{subfigure}{.5\textwidth}
@@ -304,7 +304,7 @@
 	\end{figure}
 	
 	\subsection*{Install Photodiode Connections}
-	In order to have a serviceable unit, we should leave a solderable break point in the photodiode connections. When the photodiode is connected to the front plate, this will allow the removal of the plate and service of the unit.
+	In order to have a serviceable unit, we should leave a solderable break point in the photodiode connections. When the photodiode is connected to the front plate, this will allow the removal of the plate and service of the unit. This can be done using some of the trimmed pin lengths from the other through hole components.
 	
 	\begin{figure}[H]
 		\centering
@@ -315,7 +315,31 @@
 	
 	\subsection*{Attach Front Panel to Photodiode}
 	
+	% Subfigures 
+	\begin{figure} [H]
+		\centering
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=0.73\linewidth]{diagrams/ASM_PD_MOUNT}
+			\caption{Attaching photodiode to front panel\newline with CA glue.}
+		\end{subfigure}%
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=1.0\linewidth]{diagrams/ASM_PD_MOUNT2}
+			\caption{Shape the break point pins as shown to avoid strain on the photodiode pins when mounting}
+		\end{subfigure}
+		\caption{The photodiode can be attached to the front plate with Cyanoacrylate (CA) glue, also known as Superglue. Be careful not to fog the window of the photodiode with the fumes of the glue. The photodiode can be mounted such that minimal strain is placed on the pins of the actual device.}
+	\end{figure}
+	
 	\subsection*{Final Assembly and Mounting}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.5\linewidth]{diagrams/ASM_FULL}
+		\caption{Fully assembled photodetector with labeled switch functions.}
+		\label{fig:asmfull}
+	\end{figure}
+	
 	
 	\section*{Test Data}
 	
@@ -326,11 +350,20 @@
 		\label{fig:testsetup}
 	\end{figure}
 	
-	\begin{figure}[H]
+	% Subfigures 
+	\begin{figure} [H]
 		\centering
-		\includegraphics[width=0.7\linewidth]{diagrams/TEST_SCOPE}
-		\caption{Oscilloscope view of output, showing a clean sinusoidal response. The detector is set to AC coupling, and a slight residual offset can be seen.}
-		\label{fig:testscope}
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=0.85\linewidth]{diagrams/TEST_SCOPE_AC}
+			\caption{AC coupling mode.}
+		\end{subfigure}%
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=0.85\linewidth]{diagrams/TEST_SCOPE_DC}
+			\caption{DC coupling mode.}
+		\end{subfigure}
+		\caption{The action of the AC/DC coupling switch on the signal for a 10kHz sine-modulated light source. The Pk-Pk values between the two measurements are nearly indistinguishable, but have been modified here to fit on the scope screen. }
 	\end{figure}
 	
 	
