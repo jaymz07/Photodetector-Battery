@@ -64,4 +64,4 @@ The two boards necessary for building the photodetector are included as `.zip` f
 
 ## Assembly Instructions
 
-Assembly instructions are provided in the `ASSEMBLY INSTRUCTIONS.pdf` file.
+Assembly instructions are provided in the [Assembly Instructions](https://raw.githubusercontent.com/jaymz07/Photodetector-Battery/main/ASSEMBLY%20INSTRUCTIONS.pdf) file.
