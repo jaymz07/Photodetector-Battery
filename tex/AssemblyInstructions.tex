@@ -343,6 +343,16 @@
 	
 	\section*{Test Data}
 	
+	An open-source current source with modulation input can be found at
+	\begin{quote}
+		\url{https://github.com/jaymz07/Constant-Current-Driver-simple}
+	\end{quote}
+	The test data was generated using this driver to apply sinusoidal modulation to a standard red LED, which was coupled to the photodetectors' InGaAs photodiode. Since the wavelength of the LED is well outside the usual detection range of the photodiode (1--1.7{\textmu}m), a tight coupling is required.
+	
+	A better test of the photodetector's sensitivity can be conducted using an IR remote, which usually has a wavelength ($\sim$940nm) closer to the intended response. An incandescent light bulb also provides plenty of NIR light for testing.
+	
+	For photodetectors built with Si photodiodes, most visible light sources will suffice for testing. For the Si photodiodes, the response peak is around $\sim$1{\textmu}m, so an IR remote will show a very large signal.
+	
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7\linewidth]{diagrams/TEST_Setup}
