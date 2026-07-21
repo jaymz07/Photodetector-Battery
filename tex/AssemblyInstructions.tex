@@ -111,6 +111,8 @@
 		\end{center}
 	\end{table}
 	
+	\subsection*{Component Sources}
+	
 	\begin{table}[H]
 		\begin{center}
 			\caption{Links to Passive Component Sources} \label{tbl:TIA_parts}
@@ -343,6 +345,7 @@
 	
 	\section*{Test Data}
 	
+	\subsection*{Light Source}
 	An open-source current source with modulation input can be found at
 	\begin{quote}
 		\url{https://github.com/jaymz07/Constant-Current-Driver-simple}
@@ -375,6 +378,14 @@
 		\end{subfigure}
 		\caption{The action of the AC/DC coupling switch on the signal for a 10kHz sine-modulated light source. The Pk-Pk values between the two measurements are nearly indistinguishable, but have been modified here to fit on the scope screen. }
 	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=1.0\linewidth]{diagrams/TEST_FRA}
+		\caption{Frequency response analysis of the photodetector designed with TIA idential to Table \ref{tbl:TIA_design}. Data is taken with a Keysight DSOX1204G oscilloscope/function generator combination. The input monitored the current modulation of the LED, and the output monitored the response of the photodetector as a function of the LED modulation frequency. The blue-green curve is the frequency response magnitude, and the red curve is the phase.}
+		\label{fig:testfra}
+	\end{figure}
+	
 	
 	
 
