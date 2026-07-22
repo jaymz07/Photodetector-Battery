@@ -358,7 +358,7 @@
 	
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.7\linewidth]{diagrams/TEST_Setup}
+		\includegraphics[width=1.0\linewidth]{diagrams/TEST_Setup}
 		\caption{Testing setup. Although the red LED is outside the usual detection range of the InGaAs photodiode, a response can be forced by "blasting it in the face". The LED is driven by a constant current source with external modulation.}
 		\label{fig:testsetup}
 	\end{figure}
@@ -368,15 +368,15 @@
 		\centering
 		\begin{subfigure}{.5\textwidth}
 			\centering
-			\includegraphics[width=0.85\linewidth]{diagrams/TEST_SCOPE_AC}
+			\includegraphics[width=0.9\linewidth]{diagrams/TEST_SCOPE_AC}
 			\caption{AC coupling mode.}
 		\end{subfigure}%
 		\begin{subfigure}{.5\textwidth}
 			\centering
-			\includegraphics[width=0.85\linewidth]{diagrams/TEST_SCOPE_DC}
+			\includegraphics[width=0.9\linewidth]{diagrams/TEST_SCOPE_DC}
 			\caption{DC coupling mode.}
 		\end{subfigure}
-		\caption{The action of the AC/DC coupling switch on the signal for a 10kHz sine-modulated light source. The Pk-Pk values between the two measurements are nearly indistinguishable, but have been modified here to fit on the scope screen. }
+		\caption{The action of the AC/DC coupling switch on the signal for a 10kHz sine-modulated light source. The Pk-Pk values between the two measurements are nearly indistinguishable.}
 	\end{figure}
 	
 	\begin{figure}[H]
@@ -385,6 +385,21 @@
 		\caption{Frequency response analysis of the photodetector designed with TIA idential to Table \ref{tbl:TIA_design}. Data is taken with a Keysight DSOX1204G oscilloscope/function generator combination. The input monitored the current modulation of the LED, and the output monitored the response of the photodetector as a function of the LED modulation frequency. The blue-green curve is the frequency response magnitude, and the red curve is the phase.}
 		\label{fig:testfra}
 	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.85\linewidth]{diagrams/TEST_BodePlot}
+		\caption{Test data showing extremely flat frequency response across the audio band, dropping to -3dB at $\sim$63kHz.}
+		\label{fig:testbodeplot}
+	\end{figure}
+	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.85\linewidth]{diagrams/TEST_acdcPhase}
+		\caption{For frequencies above 100Hz, the AC coupling switch has little effect on phase.}
+		\label{fig:testacdcphase}
+	\end{figure}
+	
 	
 	
 	
