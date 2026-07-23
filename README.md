@@ -1,6 +1,6 @@
 # Battery-Powered, Amplified Photodetector
 
-A battery-powered photodetector design which runs off a 9V battery, with +-12V max output. Designed specifically for the Thorlabs EECT3011 enclosure.
+A battery-powered photodetector design which runs off a 9V battery, with +-12V max output. Designed specifically for the Thorlabs EECT3011 enclosure. Includes [Detailed Assembly Instructions](https://raw.githubusercontent.com/jaymz07/Photodetector-Battery/main/ASSEMBLY%20INSTRUCTIONS.pdf)
 
 The most inconvenient aspect of setting up an amplified photodetector in an experiment usually turns out to be finding a bipolar power supply and arranging the proper connections to the board. With this design, the only connection required is the BNC connection to the oscilloscope!
 
