@@ -34,7 +34,7 @@
 	\author{James Bounds}
 	\maketitle
 	
-	A battery-powered photodetector design which runs off a 9V battery, with $\pm$12V max output. Designed specifically for the Thorlabs EECT3011 enclosure.
+	A battery-powered photodetector design which runs off a 9V battery, with $\pm$12V max output. Designed specifically for the Thorlabs \href{https://www.thorlabs.com/item/EECT3011}{EECT3011} enclosure.
 	
 	\section*{Transimpedance Amplifier}
 	
@@ -333,13 +333,32 @@
 		\caption{The photodiode can be attached to the front plate with Cyanoacrylate (CA) glue, also known as Superglue. Be careful not to fog the window of the photodiode with the fumes of the glue. The photodiode can be mounted such that minimal strain is placed on the pins of the actual device.}
 	\end{figure}
 	
-	\subsection*{Final Assembly and Mounting}
+	\subsection*{Final Assembly}
 	
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.5\linewidth]{diagrams/ASM_FULL}
 		\caption{Fully assembled photodetector with labeled switch functions.}
 		\label{fig:asmfull}
+	\end{figure}
+	
+	\subsection*{Mounting}
+	In order to mount the photodetector to standard optical posts, either the \href{https://www.thorlabs.com/item/ECM175}{ECM175} to mount the detector with the larger dimensions parallel to the table, or vertically with the \href{https://www.thorlabs.com/item/ECM125}{ECM125} bracket to give a slightly better footprint.
+	
+	% Subfigures 
+	\begin{figure} [H]
+		\centering
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=0.9\linewidth]{diagrams/MOUNT_SMALL}
+			\caption{The \href{https://www.thorlabs.com/item/ECM125}{ECM125} mounting bracket used to attach the photodetector to a 1/2" post.}
+		\end{subfigure}%
+		\begin{subfigure}{.5\textwidth}
+			\centering
+			\includegraphics[width=0.7\linewidth]{diagrams/MOUNT_TABLE}
+			\caption{Photodetector mounted to optical table.}
+		\end{subfigure}
+		\caption{The action of the AC/DC coupling switch on the signal for a 10kHz sine-modulated light source. The Pk-Pk values between the two measurements are nearly indistinguishable.}
 	\end{figure}
 	
 	
