@@ -3,4 +3,7 @@ tex/AssemblyInstructions.log
 tex/AssemblyInstructions.out
 tex/AssemblyInstructions.pdf
 tex/AssemblyInstructions.synctex.gz
+test-data/acdcPhase.pdf
+test-data/BodePlot.pdf
+test-data/.ipynb_checkpoints
 updatePDF.sh
